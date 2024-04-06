@@ -1,3 +1,5 @@
+ /* General styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,10 +13,13 @@
   align-items: center;
   text-align: left;
   width: 100%;
-  height: 100vh;
- 
-  background: rgb(171,251,63);
-  background: linear-gradient(55deg, rgba(171,251,63,1) 0%, rgba(50,150,29,1) 100%);
+  min-height: 100vh; /* Changed height to min-height for responsiveness */
+  background: rgb(171, 251, 63);
+  background: linear-gradient(
+    55deg,
+    rgba(171, 251, 63, 1) 0%,
+    rgba(50, 150, 29, 1) 100%
+  );
 }
 
 .icon {
@@ -29,21 +34,24 @@
   justify-content: space-between;
   align-items: center;
   border: 1.5px solid #868685;
-  padding: 15px;
+  padding: 10px; /* Adjusted padding for responsiveness */
   height: 60px;
-
   border-radius: 10px;
 }
 
+/* Form styles */
+
 form {
- 
-  width: 40%;
-  height: 90vh;
+  width: 90%; /* Adjusted form width for responsiveness */
+  max-width: 600px; /* Added max-width for larger screens */
   border: 2px solid rgba(107, 104, 104, 0.046);
   border-radius: 20px;
   padding: 20px;
   background-color: rgba(241, 241, 241, 0.753);
 }
+
+/* Input, select, and message styles */
+
 input,
 select,
 .msg {
@@ -51,36 +59,44 @@ select,
   font-style: normal;
   color: rgb(14, 15, 12);
   line-height: 28px;
-  font-size: 22px;
-  width: 79px;
+  font-size: 18px; /* Adjusted font size for responsiveness */
+  width: 100%; /* Full width for input, select */
   background-color: transparent;
-
 }
 
-
-::placeholder {
-  color: rgb(92, 92, 92);
-}
 .msg {
-  width: 200px;
+  width: auto; /* Adjusted width for message */
   color: rgb(92, 92, 92);
 }
+
 .amount input {
-  width: 196px;
+  width: 100%; /* Full width for input */
   border: none;
   outline: none;
-}
+
+    font-weight: 600;
+    font-style: normal;
+    color: rgb(14, 15, 12);
+    line-height: 28px;
+    font-size: 22px;
+    width: 196px;
+    background-color: transparent;
+    text-align: center; /* Center placeholder text */
+  }
+
 
 .lable {
   font-weight: 400;
   color: rgb(71, 69, 69);
-  font-size: 20px;
+  font-size: 18px; /* Adjusted font size for responsiveness */
   line-height: 20px;
-  margin:  15px;
+  margin: 15px 0; /* Adjusted margin for responsiveness */
 }
+
 .hide {
   display: none;
 }
+
 #notice {
   border-radius: 10px;
   color: red;
@@ -88,20 +104,26 @@ select,
   padding: 10px;
 }
 
+/* Select container styles */
+
 .select-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .select-container img {
   border-radius: 50%;
   width: 22px;
 }
+
 .select-container select {
   border: none;
   outline: none;
+  width: 100%; /* Full width for select */
 }
 
+/* Button styles */
 
 .btn {
   width: 100%;
@@ -110,12 +132,12 @@ select,
   background-color: rgba(7, 135, 7, 0.916);
   color: aliceblue;
   border: none;
-  font-size: 26px;
+  font-size: 24px; /* Adjusted font size for responsiveness */
   font-weight: 600;
   border-radius: 25px;
 }
 
-/* css for details section */
+/* Details section styles */
 
 .details {
   display: flex;
@@ -124,15 +146,17 @@ select,
   text-align: center;
   border: 5px solid rgba(133, 4, 4, 0.233);
   width: 100%;
-  padding: 19px 80px;
+  padding: 15px;
   border-radius: 25px;
   margin: 30px 0;
   box-sizing: border-box;
 }
-h2{
+
+h2 {
   font-family: "Inter", Helvetica, Arial, sans-serif;
   color: rgb(173, 19, 19);
 }
+
 .details li {
   display: flex;
   justify-content: space-between;
@@ -148,18 +172,52 @@ li hr {
   border: 1px solid rgba(103, 104, 103, 0.155);
   width: 100%;
 }
+
 .s1 {
   font-weight: 600;
   color: rgb(14, 15, 12);
   font-size: 16px;
   line-height: 26px;
 }
-#tocurr{
+
+#tocurr {
   font-weight: 600;
-font-style: normal;
-color: rgb(14, 15, 12);
-line-height: 28px;
-font-size: 22px;
-margin: 5px;
+  font-style: normal;
+  color: rgb(14, 15, 12);
+  line-height: 28px;
+  font-size: 20px; /* Adjusted font size for responsiveness */
+  margin: 5px;
 }
+
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 768px) {
+  .display {
+    flex-direction: column; 
+    height: auto; 
+  }
+
+  .display > * {
+    margin-bottom: 10px; 
+  }
+
+  .container {
+    padding: 20px; 
+  }
+
+  form {
+    width: 100%; 
+    padding: 15px; 
+  }
+
+  .btn {
+    font-size: 22px; 
+  }
+
+  .lable {
+    font-size: 16px; 
+  }
+}
+
 
