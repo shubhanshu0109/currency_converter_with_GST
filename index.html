@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <title>wise: currency converter</title>
+  </head>
+  <body>  
+       
+ 
+    <div class="container">
+
+          <form>
+            <p class="lable">Recipient Gets</p>
+            <div class="display">
+              <div class="amount">
+                <input class="same"  type="text" placeholder="Forex Amount" />
+              </div>
+              <div class="dropdown">
+                <div class="from">
+                  <div class="select-container">
+                    <img src="https://wise.com/web-art/assets/flags/us.svg" alt="Flag" class="flag" />
+                    <select name="from" id="fromSelect" class="">
+                       
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <ul class="details" >
+              <h2>Charges</h2>
+              <li>
+                <span>Nostro Charges</span>
+                <span class="s1">  1500 </span>
+              </li>
+              <li>
+                
+                <span>Service Charge</span>
+                <span class="s1"
+                  >
+                  <span class="fee">250 INR </span>
+                </span>
+
+              </li>
+              <li>
+                <span>GST</span>
+                <span class="s1"
+                  ><span class="fees" id="gst">18% </span></span
+                >
+               
+              </li>
+              <li>
+                <hr />
+              </li>
+              
+
+              <li>
+                <span> <u> Rate</u></span>
+                <span class="s1">
+                   <u id="showRate"> ___</u>
+                </span>
+                
+              </li>
+            </ul>
+
+            <p class="lable">You Send</p>
+            <div class="display">
+              <div class="msg same">INR amount</div>
+              <div class="dropdown">
+                <div class="to">
+                  <div class="select-container">
+                    <img src="https://wise.com/web-art/assets/flags/inr.svg" />
+                    <div id="tocurr">INR</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="lable hide" id="notice"></p>
+            <button class="btn grn">Place order</button>
+          </form>
+        </div>
+     
+        <script src="/code.js"></script>
+        <script src="/app.js"></script>
+  </body>
+</html>
